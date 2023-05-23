@@ -72,7 +72,7 @@ public class bloodDistribution {
         
         // AB negative
         if(patient[6] > 0){
-            for(int x = 0; x < patient.length - 2; x+=2){
+            for(int x = 0; x < blood.length - 2; x+=2){
                 if(blood[x] > 0){
                     if(patient[6] > blood[x]){
                         total+=blood[x];
@@ -114,7 +114,7 @@ public class bloodDistribution {
 
         // AB positive
         if(patient[7] > 0){
-            for(int x = 0; x < patient.length - 2; x++){
+            for(int x = 0; x < blood.length - 2; x++){
                 if(blood[x] > 0){
                     if(patient[7] > blood[x]){
                         total+=blood[x];
