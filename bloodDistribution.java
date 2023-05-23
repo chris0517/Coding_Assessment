@@ -31,23 +31,23 @@ public class bloodDistribution {
 
         for(int x = 0; x < patient.length; x++){
             if(blood[x] > patient[x]){
-                total+=patient[x];
-                blood[x]-=patient[x];
+                total += patient[x];
+                blood[x] -= patient[x];
                 patient[x] = 0;
             }else{
-                total+=blood[x];
-                patient[x]-=blood[x];
+                total += blood[x];
+                patient[x] -= blood[x];
                 blood[x] = 0;
             }
             if(x%2 != 0){
                 if(blood[x-1] > 0){
                     if(blood[x-1] > patient[x]){
-                        total+=patient[x];
-                        blood[x-1]-=patient[x];
+                        total += patient[x];
+                        blood[x-1] -= patient[x];
                         patient[x] = 0;
                     }else{
                         total+=blood[x-1];
-                        patient[x]-=blood[x-1];
+                        patient[x] -= blood[x-1];
                         blood[x-1] = 0;
                     }
                 }
@@ -75,7 +75,7 @@ public class bloodDistribution {
             for(int x = 0; x < blood.length - 2; x+=2){
                 if(blood[x] > 0){
                     if(patient[6] > blood[x]){
-                        total+=blood[x];
+                        total += blood[x];
                         patient[6] -= blood[x];
                         blood[x] = 0;
                     }else{
@@ -95,7 +95,7 @@ public class bloodDistribution {
                 bloodPositive = 0;
             }else{
                 total += blood[1];
-                bloodPositive-=blood[1];
+                bloodPositive -= blood[1];
                 blood[1] = 0;
             }
             if(blood[0] > 0){
@@ -117,7 +117,7 @@ public class bloodDistribution {
             for(int x = 0; x < blood.length - 2; x++){
                 if(blood[x] > 0){
                     if(patient[7] > blood[x]){
-                        total+=blood[x];
+                        total += blood[x];
                         patient[7] -= blood[x];
                         blood[x] = 0;
                     }else{
